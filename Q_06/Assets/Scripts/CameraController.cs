@@ -23,7 +23,8 @@ public class CameraController : MonoBehaviour
     private void SetTransform()
     {
         if (!_hasFollowTarget) return;
-
+        transform.position = _followTarget.position;                                    // 수정(추가)
+        transform.LookAt(transform.position + _followTarget.forward);                   // 수정(추가)
         _followTarget.SetPositionAndRotation(
             transform.position,
             transform.rotation

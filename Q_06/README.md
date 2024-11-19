@@ -11,4 +11,8 @@
 제시된 프로젝트에서 발생하는 `문제들을 모두 서술`하고 올바르게 동작하도록 `소스코드를 개선`하시오.
 
 ## 답안
-- 
+- 1. 레이캐스트로 발사해도 인식 못하던 문제
+=> LayerMask가 Enemy로 설정되지 않았었음. 수정완료
+
+- 2. 카메라의 위치가 설정되지 않아있던 문제
+=> 카메라의 transform.position을 muzzlepoint로 설정하고 바라보는 방향을 LookAt(transform.position + muzzlepoint.forward)로 설정하여 1인칭 시점 구현
