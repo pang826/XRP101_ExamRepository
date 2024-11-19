@@ -21,4 +21,16 @@
 제시된 프로젝트에서 발생하는 `문제들을 모두 서술`하고 올바르게 동작하도록 `소스코드를 개선`하시오.
 
 ## 답안
-- 
+ - 1. 리지드바디가 없어서 충돌을 감지하지 못하는 문제.
+ 해결 : 플레이어에 리지드 바디 추가
+
+ - 2. bullet에 리지드바디가 없어서 Fire메서드의 rigid.Addforce가 동작하지 않음
+ 해결 : bullet에 리지드 바디 추가
+
+ - 3. bullet이 플레이어에게 닿았을 때 감지하지 못하는 문제 발생. 
+ => 트리거에 닿은 player 태그를 가진 물체가 rigidbody를 들고 있어야 하고 playercontroller도 들고 있어야하기 때문에 body가 아닌
+ player오브젝트에 rigidbody와 collider를 두기 or other.Getcomponent<PlayerController> -> other.GetComponentInParent<PlayerController>로 수정해야 함
+ (나는 후자 선택)
+
+ - 4. 플레이어가 사망할 때 플레이어가 꺼지기 때문에 오디오를 재생하지 못함(재생했지만 바로 삭제되서 안들리는 것) 
+ => 자연스럽게 보이기 위해 사망할 시 player오브젝트가 아닌 body오브젝트를 꺼지게 함.(수정된 부분 표시) 1초뒤에 플레이어 오브젝트도 삭제.(삭제하지 않으니 계속 트리거 인식)
