@@ -10,6 +10,7 @@ public class GameManager : SingletonBehaviour<GameManager>
     private void Awake()
     {
         SingletonInit();
+        
         Score = 0.1f;
     }
 
