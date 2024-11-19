@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class PlayerStatus : MonoBehaviour
 {
-    public float MoveSpeed
-    {
-        get => MoveSpeed;
-        private set => MoveSpeed = value;
-    }
+    //private float _moveSpeed;
+    public float MoveSpeed { get; private set; } // 프로퍼티 수정
+    //{
+    //    get => MoveSpeed;
+    //    private set =>  MoveSpeed = value; 
+    //}
 
     private void Awake()
     {
@@ -18,5 +19,6 @@ public class PlayerStatus : MonoBehaviour
     private void Init()
     {
         MoveSpeed = 5f;
+        // _moveSpeed = 5f;
     }
 }
