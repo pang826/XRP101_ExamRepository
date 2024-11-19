@@ -16,3 +16,6 @@
 
 - 2. 카메라의 위치가 설정되지 않아있던 문제
 => 카메라의 transform.position을 muzzlepoint로 설정하고 바라보는 방향을 LookAt(transform.position + muzzlepoint.forward)로 설정하여 1인칭 시점 구현
+
+- 3. 레이캐스트가 월드의 forward 방향으로 고정적으로 발사되고 있던 문제
+=> transform.forward로 수정하여 시점이 바뀌면 해당방향으로 발사되도록 수정
