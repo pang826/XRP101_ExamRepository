@@ -131,7 +131,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 544023764665276946, guid: 7077a7e4b41694f8d8f125aa9a5a7afd, type: 3}
       propertyPath: m_Name
-      value: Enemy (1)
+      value: Enemy2
       objectReference: {fileID: 0}
     - target: {fileID: 544023764665276950, guid: 7077a7e4b41694f8d8f125aa9a5a7afd, type: 3}
       propertyPath: m_RootOrder
@@ -379,7 +379,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 544023764665276946, guid: 7077a7e4b41694f8d8f125aa9a5a7afd, type: 3}
       propertyPath: m_Name
-      value: Enemy (2)
+      value: Enemy3
       objectReference: {fileID: 0}
     - target: {fileID: 544023764665276950, guid: 7077a7e4b41694f8d8f125aa9a5a7afd, type: 3}
       propertyPath: m_RootOrder
