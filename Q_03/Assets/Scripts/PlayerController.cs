@@ -33,6 +33,8 @@ public class PlayerController : MonoBehaviour
     public void Die()
     {
         _audio.Play();
-        gameObject.SetActive(false);
+        GameObject body = transform.GetChild(0).gameObject;                  // 수정된 부분
+        body.SetActive(false);                                               // 수정된 부분
+        Destroy(gameObject, 1f);                                             // 수정된 부분
     }
 }
