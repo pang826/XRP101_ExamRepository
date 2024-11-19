@@ -635,6 +635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _deactiveTime: 2
+  _cube: {fileID: 1274773032}
   _popup: {fileID: 2099332692}
 --- !u!114 &458873371
 MonoBehaviour:

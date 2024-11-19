@@ -8,7 +8,7 @@ public class PopupController : MonoBehaviour
     [SerializeField] private float _deactiveTime;
     private WaitForSeconds _wait;
     private Button _popupButton;
-
+    [SerializeField] private GameObject _cube;
     [SerializeField] private GameObject _popup;
 
     private void Awake()
@@ -31,7 +31,7 @@ public class PopupController : MonoBehaviour
     private void Activate()
     {
         _popup.gameObject.SetActive(true);
-        GameManager.Intance.Pause();
+        //GameManager.Intance.Pause();
         StartCoroutine(DeactivateRoutine());
     }
 
@@ -42,7 +42,9 @@ public class PopupController : MonoBehaviour
 
     private IEnumerator DeactivateRoutine()
     {
+        _cube.GetComponent<ObjectRotater>().enabled = false;
         yield return _wait;
+        _cube.GetComponent<ObjectRotater>().enabled = true;
         Deactivate();
     }
 }
